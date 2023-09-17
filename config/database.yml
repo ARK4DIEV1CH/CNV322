@@ -11,6 +11,18 @@ default: &default
 
 development:
   <<: *default
-  database: db/development
-  username: <%= ENV["BATTLE_CATS_DATABASE_USERNAME"] %>
-  password: <%= ENV["BATTLE_CATS_DATABASE_PASSWORD"] %>
+  database: CNV322_development
+  username: <%= ENV["CNV322_DEV_DATABASE_USERNAME"] %>
+  password: <%= ENV["CNV322_DEV_DATABASE_PASSWORD"] %>
+
+test:
+  <<: *default
+  database: CNV322_test
+  username: <%= ENV["CNV322_DEV_DATABASE_USERNAME"] %>
+  password: <%= ENV["CNV322_DEV_DATABASE_PASSWORD"] %>
+
+production:
+  <<: *default
+  database: CNV322_production
+  username: CNV322
+  password: <%= ENV["CNV322_DATABASE_PASSWORD"] %>
