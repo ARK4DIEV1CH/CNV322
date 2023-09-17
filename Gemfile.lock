@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    SurepGem3 (0.2)
     actioncable (7.0.8)
       actionpack (= 7.0.8)
       activesupport (= 7.0.8)
@@ -219,6 +220,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  SurepGem3 (~> 0.2)
   bootsnap
   capybara
   debug
