@@ -2,5 +2,5 @@ class User < ApplicationRecord
   validates :name, :email, presence: true
   validates :email, uniqueness: true
 
-  has_one :huser
+  has_many :list
 end
