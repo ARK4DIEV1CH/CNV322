@@ -14,20 +14,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_17_233611) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "history_list", force: :cascade do |t|
-    t.string "name", null: false
-    t.bigint "user_history_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_history_id"], name: "index_history_list_on_user_history_id"
-  end
-
-  create_table "user_history", force: :cascade do |t|
+  create_table "husers", force: :cascade do |t|
     t.string "name", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_history_on_user_id"
+    t.index ["user_id"], name: "index_husers_on_user_id"
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string "name", null: false
+    t.bigint "husers_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["husers_id"], name: "index_lists_on_husers_id"
   end
 
   create_table "users", force: :cascade do |t|
