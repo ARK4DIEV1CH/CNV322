@@ -1,24 +1,28 @@
-# README
+## Running in development mode
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dependencies:
+- Ruby 3.2
+- PostgreSQL
 
-Things you may want to cover:
 
-* Ruby version
+Fill credentials in `.env` file as
+```
+CNV322_DEV_DATABASE_USERNAME = your_postgres_username
+CNV322_DEV_DATABASE_PASSWORD = your_postgres_password
+```
 
-* System dependencies
+Install dependencies:
 
-* Configuration
+```bash
+bundle install
+```
+Run the frontend dev build:
 
-* Database creation
+```bash
+foreman start -f Procfile.dev
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the web server from IDE or from terminal with
+```bash
+rails s
+```
